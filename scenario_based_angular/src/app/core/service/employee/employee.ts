@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Service } from '@angular/core';
 import { environment } from '../../../../environments/environment.development';
 import { GlobalConstant } from '../../constant/Global.constant';
+import { getPieValue } from '../../helper/common.helper';
 
 @Service()
 export class Employee {
@@ -16,5 +17,9 @@ export class Employee {
 
     createNewEmplyee(obj: any) {
         return this.http.post(environment.API_URL + "EmployeeApp/CreateEmployee", obj);
+    }
+
+    getValueFromHelper(){
+        const value = getPieValue();
     }
 }
