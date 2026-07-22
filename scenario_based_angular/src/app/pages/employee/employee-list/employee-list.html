@@ -1,1 +1,6 @@
-<p>employee-list works!</p>
+<ul>
+    @for (emp of employeeList ; track $index) {
+     <li>{{emp.employeeId}}</li>   
+    <li>{{emp.fullName}}</li>
+    }
+</ul>
